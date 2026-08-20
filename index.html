@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>FQA Test Execution Dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23078ba9'/%3E%3Cpath d='M15 43V21h34v22M22 35l7-7 6 6 8-10' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/dashboard.css">
+</head>
+<body>
+  <main class="dashboard-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">FQA TEST PLAN MANAGEMENT</p>
+        <h1>Test Execution Dashboard</h1>
+      </div>
+      <div class="sync-panel" aria-live="polite">
+        <span class="sync-dot" data-sync-dot></span>
+        <span data-last-updated>Loading dashboard data…</span>
+        <button class="refresh-button" type="button" data-refresh>Refresh</button>
+      </div>
+    </header>
+
+    <section class="run-selector-card" aria-label="Test Run selector">
+      <label for="run-selector">Test Run</label>
+      <select id="run-selector" data-run-selector></select>
+      <label for="project-filter">Project</label>
+      <select id="project-filter" data-project-filter>
+        <option value="">All projects</option>
+      </select>
+    </section>
+
+    <div class="message" data-message hidden></div>
+
+    <section class="overview-card" data-overview aria-live="polite">
+      <div class="overview-header">
+        <div>
+          <h2>Execution Result Overview - <span data-run-name></span></h2>
+          <p>Selected Test Run result distribution for visual review.</p>
+        </div>
+        <div class="total-progress" data-total-progress aria-label="Executed and total cases">
+          <span data-progress-fill></span>
+          <strong data-progress-text></strong>
+        </div>
+      </div>
+
+      <div class="overview-main">
+        <div class="donut-wrap">
+          <div class="donut" data-donut role="img" aria-label="Test result distribution">
+            <div class="donut-centre">
+              <strong data-pass-rate>0%</strong>
+              <span>Pass Rate</span>
+              <small data-passed-ratio>0 / 0 passed</small>
+            </div>
+          </div>
+        </div>
+        <div class="status-grid" data-status-grid></div>
+      </div>
+
+      <div class="tester-section">
+        <h3>Tester Overview</h3>
+        <div class="tester-list" data-tester-list></div>
+      </div>
+    </section>
+
+    <section class="recent-section">
+      <h2>Recent Test Runs</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th class="centre">Overview</th>
+              <th>Recent Run</th>
+              <th>Plan</th>
+              <th>Build</th>
+              <th class="centre">Progress</th>
+              <th class="centre">Estimated time</th>
+              <th class="centre">Executed time</th>
+              <th class="centre">Status</th>
+            </tr>
+          </thead>
+          <tbody data-run-table></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <noscript>This dashboard requires JavaScript to parse and display dashboard.json.</noscript>
+  <script src="assets/dashboard.js" defer></script>
+</body>
+</html>
