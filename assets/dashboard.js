@@ -195,6 +195,8 @@
       const row = document.createElement('tr');
       const progress = percentage(run.executed_cases, run.total_cases);
       row.innerHTML = `<td class="centre"><button class="view-button" type="button" title="View overview" aria-label="View overview">◉</button></td><td><button class="run-link" type="button"></button></td><td></td><td></td><td class="centre"><div class="mini-progress"><span></span><strong></strong></div></td><td class="centre"></td><td class="centre"></td><td class="centre"><span class="badge"></span></td>`;
+      ['Overview', 'Recent Run', 'Plan', 'Build', 'Progress', 'Estimated time', 'Executed time', 'Status']
+        .forEach((label, index) => { row.children[index].dataset.label = label; });
       const buttons = [row.querySelector('.view-button'), row.querySelector('.run-link')];
       buttons.forEach(button => button.addEventListener('click', () => renderOverview(run)));
       row.querySelector('.view-button').classList.toggle('active', run.run_id === selectedRunId);
