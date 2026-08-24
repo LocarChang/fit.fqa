@@ -31,6 +31,15 @@
     refresh: document.querySelector('[data-refresh]')
   };
 
+  function ensureProjectFirst() {
+    const card = document.querySelector('.run-selector-card');
+    const projectLabel = card?.querySelector('label[for="project-filter"]');
+    if (!card || !projectLabel || !ui.project) return;
+    card.prepend(projectLabel, ui.project);
+  }
+
+  ensureProjectFirst();
+
   let dashboard = null;
   let selectedRunId = null;
 
