@@ -2,6 +2,8 @@
 
 Static GitHub Pages dashboard for parsing `data/dashboard.json` and switching between Test Run overviews.
 
+The desktop layout remains unchanged above 800 px. At phone widths (600 px and below), the overview becomes a single-column layout, result statistics use two columns, and Recent Test Runs automatically changes from a wide table into three-row touch-friendly cards without horizontal scrolling. Project is selected first and filters the available Test Runs.
+
 ## Publish
 
 Copy the contents of this directory to the root of the `fit.fqa` repository. GitHub Pages can continue to publish from `main` through the existing workflow.

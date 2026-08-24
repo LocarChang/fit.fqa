@@ -184,6 +184,20 @@
     return dashboard.test_runs.filter(run => !project || run.project === project);
   }
 
+  function renderRunSelector(preferredRunId = selectedRunId) {
+    const runs = filteredRuns();
+    ui.selector.replaceChildren(...runs.map(run => new Option(run.run_name, run.run_id)));
+    const selected = runs.find(run => run.run_id === preferredRunId) || runs[0];
+    ui.selector.disabled = runs.length === 0;
+    if (selected) {
+      renderOverview(selected);
+    } else {
+      selectedRunId = null;
+      renderTable();
+      setMessage('No Test Run is available for the selected Project.');
+    }
+  }
+
   function statusClass(value) {
     const candidate = value.toLowerCase().replace(/[^a-z]/g, '');
     return ['running', 'approving', 'completed', 'draft'].includes(candidate) ? candidate : 'draft';
@@ -217,10 +231,12 @@
   function renderControls() {
     const projects = [...new Set(dashboard.test_runs.map(run => run.project))].sort();
     ui.project.replaceChildren(new Option('All projects', ''), ...projects.map(project => new Option(project, project)));
-    ui.selector.replaceChildren(...dashboard.test_runs.map(run => new Option(`${run.run_name} — ${run.project}`, run.run_id)));
     const hashId = decodeURIComponent(location.hash.replace(/^#run-/, ''));
     const selected = dashboard.test_runs.find(run => run.run_id === hashId) || dashboard.test_runs[0];
-    if (selected) renderOverview(selected);
+    if (selected) {
+      ui.project.value = selected.project;
+      renderRunSelector(selected.run_id);
+    }
     else setMessage('No Test Run data is available.');
   }
 
@@ -247,7 +263,10 @@
     const run = dashboard.test_runs.find(item => item.run_id === ui.selector.value);
     if (run) renderOverview(run);
   });
-  ui.project.addEventListener('change', renderTable);
+  ui.project.addEventListener('change', () => {
+    setMessage();
+    renderRunSelector();
+  });
   ui.refresh.addEventListener('click', loadDashboard);
   setInterval(loadDashboard, AUTO_REFRESH_MS);
   loadDashboard();
