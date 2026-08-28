@@ -255,7 +255,18 @@
     try {
       const response = await fetch(`${DATA_URL}?t=${Date.now()}`, { cache: 'no-store' });
       if (!response.ok) throw new Error(`Unable to load dashboard.json (HTTP ${response.status}).`);
-      dashboard = parseDashboard(await response.json());
+      const source = (await response.text()).replace(/^\uFEFF/, '');
+      if (/^(<<<<<<<|=======|>>>>>>>)/m.test(source)) {
+        throw new Error('dashboard.json contains unresolved Git merge conflict markers. Run Autosync Dashboard > Sync Now to publish a clean JSON file.');
+      }
+      let raw;
+      try {
+        raw = JSON.parse(source);
+      } catch (parseError) {
+        const detail = parseError instanceof Error ? parseError.message : 'Unknown JSON syntax error.';
+        throw new Error(`dashboard.json is invalid JSON: ${detail}`);
+      }
+      dashboard = parseDashboard(raw);
       renderSyncState();
       renderControls();
     } catch (error) {

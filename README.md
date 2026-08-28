@@ -8,6 +8,8 @@ The desktop layout remains unchanged above 800 px. At phone widths (600 px and b
 
 Copy the contents of this directory to the root of the `fit.fqa` repository. GitHub Pages can continue to publish from `main` through the existing workflow.
 
+For an existing installation, update only `index.html`, `assets/`, and this README. Do not manually replace or merge `data/dashboard.json`; that file is owned by Test Plan Management Autosync. If Git reports a conflict in that JSON file, discard the manual version and use **Autosync Dashboard > Sync Now** to publish a clean copy.
+
 ## Local preview
 
 The page loads JSON with `fetch`, so do not open `index.html` directly with `file://`. Run a local HTTP server in this directory, for example:
