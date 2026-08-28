@@ -1,7 +1,39 @@
 {
     "schema_version": "1.0",
-    "generated_at": "2026-08-28T10:18:51+08:00",
+    "generated_at": "2026-08-28T10:23:53+08:00",
     "test_runs": [
+        {
+            "run_id": 36,
+            "run_name": "Error Handling Run 2026-08-28",
+            "project": "Astraboy2 - 940",
+            "plan_name": "Error Handling",
+            "build": "1.1",
+            "run_status": "Running",
+            "estimated_time": "00:01:02",
+            "executed_time": "00:00:00",
+            "total_cases": 4,
+            "executed_cases": 0,
+            "status": {
+                "passed": 0,
+                "failed": 0,
+                "blocked": 0,
+                "retest": 0,
+                "untested": 4,
+                "skipped": 0
+            },
+            "testers": [
+                {
+                    "display_name": "locar",
+                    "total_cases": 4,
+                    "passed": 0,
+                    "failed": 0,
+                    "blocked": 0,
+                    "retest": 0,
+                    "untested": 4,
+                    "skipped": 0
+                }
+            ]
+        },
         {
             "run_id": 34,
             "run_name": "Release FC 1.21111 Run 2026-08-04",
