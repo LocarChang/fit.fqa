@@ -1,7 +1,6 @@
 {
-<<<<<<< HEAD
     "schema_version": "1.0",
-    "generated_at": "2026-08-28T09:37:34+08:00",
+    "generated_at": "2026-08-28T09:47:43+08:00",
     "test_runs": [
         {
             "run_id": 34,
@@ -100,59 +99,4 @@
             ]
         }
     ]
-=======
-  "schema_version": "1.0",
-  "generated_at": "2026-08-20T15:30:00+08:00",
-  "test_runs": [
-    {
-      "run_id": 101,
-      "run_name": "Release FC 1.21111 Run 2026-08-04",
-      "project": "ADS4",
-      "plan_name": "Release FC 1.21111",
-      "build": "1.1",
-      "run_status": "Running",
-      "estimated_time": "00:00:58",
-      "executed_time": "00:00:02",
-      "total_cases": 4,
-      "executed_cases": 1,
-      "status": { "passed": 1, "failed": 0, "blocked": 0, "retest": 0, "untested": 3, "skipped": 0 },
-      "testers": [
-        { "display_name": "locar", "total_cases": 4, "passed": 1, "failed": 0, "blocked": 0, "retest": 0, "untested": 3, "skipped": 0 }
-      ]
-    },
-    {
-      "run_id": 102,
-      "run_name": "Release FC 1.21111 Run 2026-08-10",
-      "project": "ADS4",
-      "plan_name": "Release FC 1.21111",
-      "build": "2.1",
-      "run_status": "Running",
-      "estimated_time": "00:00:56",
-      "executed_time": "00:00:54",
-      "total_cases": 8,
-      "executed_cases": 8,
-      "status": { "passed": 6, "failed": 1, "blocked": 1, "retest": 0, "untested": 0, "skipped": 0 },
-      "testers": [
-        { "display_name": "locar", "total_cases": 4, "passed": 3, "failed": 1, "blocked": 0, "retest": 0, "untested": 0, "skipped": 0 },
-        { "display_name": "Tony_Fan", "total_cases": 4, "passed": 3, "failed": 0, "blocked": 1, "retest": 0, "untested": 0, "skipped": 0 }
-      ]
-    },
-    {
-      "run_id": 103,
-      "run_name": "Update Scanner FW Run 2026-07-30",
-      "project": "Rocky",
-      "plan_name": "Update Scanner FW",
-      "build": "1.1",
-      "run_status": "Approving",
-      "estimated_time": "00:00:03",
-      "executed_time": "00:00:02",
-      "total_cases": 3,
-      "executed_cases": 3,
-      "status": { "passed": 3, "failed": 0, "blocked": 0, "retest": 0, "untested": 0, "skipped": 0 },
-      "testers": [
-        { "display_name": "Jason_Wang", "total_cases": 3, "passed": 3, "failed": 0, "blocked": 0, "retest": 0, "untested": 0, "skipped": 0 }
-      ]
-    }
-  ]
->>>>>>> f88801b (add Refresh button function)
 }
