@@ -38,5 +38,6 @@ The parser validates the root structure, normalises missing numeric status field
 ## Refresh behavior
 
 - Browser checks `dashboard.json` every 60 seconds with cache disabled.
+- The Refresh button performs a full cache-busted page reload, equivalent to using Ctrl+F5 for the dashboard.
 - Data older than 15 minutes is marked as potentially outdated.
 - The future Test Plan Management exporter can update only `data/dashboard.json`; no page code changes are required.

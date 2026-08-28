@@ -268,6 +268,14 @@
     }
   }
 
+  function hardRefresh() {
+    ui.refresh.disabled = true;
+    ui.refresh.textContent = 'Refreshing…';
+    const refreshUrl = new URL(window.location.href);
+    refreshUrl.searchParams.set('_refresh', Date.now().toString());
+    window.location.replace(refreshUrl.toString());
+  }
+
   ui.selector.addEventListener('change', () => {
     const run = dashboard.test_runs.find(item => item.run_id === ui.selector.value);
     if (run) renderOverview(run);
@@ -276,7 +284,8 @@
     setMessage();
     renderRunSelector();
   });
-  ui.refresh.addEventListener('click', loadDashboard);
+  ui.refresh.title = 'Reload the page and request the latest dashboard data (Ctrl+F5 equivalent)';
+  ui.refresh.addEventListener('click', hardRefresh);
   setInterval(loadDashboard, AUTO_REFRESH_MS);
   loadDashboard();
 })();
