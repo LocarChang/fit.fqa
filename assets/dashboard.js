@@ -212,6 +212,26 @@
     return ['running', 'approving', 'completed', 'draft'].includes(candidate) ? candidate : 'draft';
   }
 
+  function refreshReviewTooltips(root = document) {
+    root.querySelectorAll('.recent-review-text').forEach(element => {
+      const fullText = element.dataset.fullText || element.textContent.trim();
+      const isOverflowing = element.scrollWidth > element.clientWidth + 1;
+      if (isOverflowing) {
+        element.title = fullText;
+        element.setAttribute('aria-label', fullText);
+      } else {
+        element.removeAttribute('title');
+        element.removeAttribute('aria-label');
+      }
+    });
+  }
+
+  function setReviewText(element, value) {
+    element.textContent = value;
+    element.dataset.fullText = value;
+    element.classList.add('recent-review-text');
+  }
+
   function renderTable() {
     const runs = filteredRuns();
     ui.table.replaceChildren(...runs.map(run => {
@@ -223,8 +243,10 @@
       const buttons = [row.querySelector('.view-button'), row.querySelector('.run-link')];
       buttons.forEach(button => button.addEventListener('click', () => renderOverview(run)));
       row.querySelector('.view-button').classList.toggle('active', run.run_id === selectedRunId);
-      row.querySelector('.run-link').textContent = run.run_name;
-      row.children[2].textContent = run.plan_name;
+      setReviewText(row.querySelector('.run-link'), run.run_name);
+      const planText = document.createElement('span');
+      setReviewText(planText, run.plan_name);
+      row.children[2].replaceChildren(planText);
       row.children[3].textContent = run.build;
       row.querySelector('.mini-progress span').style.width = `${progress}%`;
       row.querySelector('.mini-progress strong').textContent = formatPercent(progress);
@@ -235,6 +257,7 @@
       badge.textContent = run.run_status;
       return row;
     }));
+    requestAnimationFrame(() => refreshReviewTooltips(ui.table));
   }
 
   function renderControls() {
@@ -297,6 +320,11 @@
   });
   ui.refresh.title = 'Reload the page and request the latest dashboard data (Ctrl+F5 equivalent)';
   ui.refresh.addEventListener('click', hardRefresh);
+  let reviewTooltipResizeFrame = 0;
+  window.addEventListener('resize', () => {
+    cancelAnimationFrame(reviewTooltipResizeFrame);
+    reviewTooltipResizeFrame = requestAnimationFrame(() => refreshReviewTooltips(ui.table));
+  });
   setInterval(loadDashboard, AUTO_REFRESH_MS);
   loadDashboard();
 })();

@@ -67,6 +67,7 @@ td { color: #174055; font-size: 12px; }
 .centre { text-align: center; }
 .run-link { border: 0; background: none; color: #0871ce; padding: 0; cursor: pointer; text-align: left; }
 .run-link:hover { text-decoration: underline; }
+.recent-review-text { display: block; min-width: 0; max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .view-button { width: 27px; height: 27px; border: 1px solid #7db4d0; border-radius: 4px; background: #f8fcfe; color: #0083ac; cursor: pointer; }
 .view-button:hover, .view-button.active { background: #d5f7f8; }
 .mini-progress { position: relative; overflow: hidden; width: 125px; height: 15px; margin: auto; border-radius: 2px; background: #c8d5de; color: #fff; font-size: 9px; }
@@ -132,6 +133,8 @@ td { color: #174055; font-size: 12px; }
   tbody td:nth-child(6), tbody td:nth-child(7) { grid-row: 4; }
   tbody td:nth-child(3), tbody td:nth-child(5), tbody td:nth-child(6) { border-right: 1px solid #dbe5ea; }
   tbody td:nth-child(6), tbody td:nth-child(7) { border-bottom: 0; }
-  .run-link { overflow-wrap: anywhere; font-weight: 700; }
+  .run-link { font-weight: 700; }
+  tbody td:nth-child(2) .recent-review-text { width: 100%; max-width: none; }
+  tbody td:nth-child(3) .recent-review-text { flex: 1 1 auto; max-width: 100%; }
   .mini-progress { width: min(110px, 100%); margin: 0; }
 }
