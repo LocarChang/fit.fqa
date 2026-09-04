@@ -1,6 +1,6 @@
 {
     "schema_version": "1.0",
-    "generated_at": "2026-09-04T09:15:32+08:00",
+    "generated_at": "2026-09-04T09:20:34+08:00",
     "test_runs": [
         {
             "run_id": 41,
@@ -158,38 +158,6 @@
                     "blocked": 0,
                     "retest": 0,
                     "untested": 2,
-                    "skipped": 0
-                }
-            ]
-        },
-        {
-            "run_id": 31,
-            "run_name": "Update Scanner FW Run 2026-07-30",
-            "project": "Astraboy",
-            "plan_name": "Update Scanner FW",
-            "build": "1.1",
-            "run_status": "Approving",
-            "estimated_time": "00:00:03",
-            "executed_time": "00:00:02",
-            "total_cases": 1,
-            "executed_cases": 1,
-            "status": {
-                "passed": 1,
-                "failed": 0,
-                "blocked": 0,
-                "retest": 0,
-                "untested": 0,
-                "skipped": 0
-            },
-            "testers": [
-                {
-                    "display_name": "locar",
-                    "total_cases": 1,
-                    "passed": 1,
-                    "failed": 0,
-                    "blocked": 0,
-                    "retest": 0,
-                    "untested": 0,
                     "skipped": 0
                 }
             ]
