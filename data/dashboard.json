@@ -1,39 +1,7 @@
 {
     "schema_version": "1.0",
-    "generated_at": "2026-09-04T11:11:16+08:00",
+    "generated_at": "2026-09-04T11:16:18+08:00",
     "test_runs": [
-        {
-            "run_id": 42,
-            "run_name": "[JIRA] ASTROBOY-517 CLONE - Questions regarding ASTROBOY2( Issue 3:Inconsistency between document size option text in RSP software and specification) Run 2026-09-04",
-            "project": "Astraboy2 - 940",
-            "plan_name": "[JIRA] ASTROBOY-517 CLONE - Questions regarding ASTROBOY2( Issue 3:Inconsistency between document size option text in RSP software and specification)",
-            "build": "1.1",
-            "run_status": "Approving",
-            "estimated_time": "00:00:16",
-            "executed_time": "00:00:12",
-            "total_cases": 2,
-            "executed_cases": 2,
-            "status": {
-                "passed": 1,
-                "failed": 1,
-                "blocked": 0,
-                "retest": 0,
-                "untested": 0,
-                "skipped": 0
-            },
-            "testers": [
-                {
-                    "display_name": "locar",
-                    "total_cases": 2,
-                    "passed": 1,
-                    "failed": 1,
-                    "blocked": 0,
-                    "retest": 0,
-                    "untested": 0,
-                    "skipped": 0
-                }
-            ]
-        },
         {
             "run_id": 41,
             "run_name": "[JIRA] ASTROBOY-517 CLONE - Questions regarding ASTROBOY2( Issue 3:Inconsistency between document size option text in RSP software and specification) Run 2026-09-03",
@@ -76,24 +44,24 @@
             "estimated_time": "00:00:00",
             "executed_time": "00:00:00",
             "total_cases": 2,
-            "executed_cases": 1,
+            "executed_cases": 2,
             "status": {
-                "passed": 1,
+                "passed": 2,
                 "failed": 0,
                 "blocked": 0,
                 "retest": 0,
-                "untested": 1,
+                "untested": 0,
                 "skipped": 0
             },
             "testers": [
                 {
                     "display_name": "locar",
                     "total_cases": 2,
-                    "passed": 1,
+                    "passed": 2,
                     "failed": 0,
                     "blocked": 0,
                     "retest": 0,
-                    "untested": 1,
+                    "untested": 0,
                     "skipped": 0
                 }
             ]
