@@ -1,6 +1,6 @@
 {
     "schema_version": "1.0",
-    "generated_at": "2026-09-04T11:01:13+08:00",
+    "generated_at": "2026-09-04T11:06:15+08:00",
     "test_runs": [
         {
             "run_id": 42,
@@ -12,13 +12,13 @@
             "estimated_time": "00:00:18",
             "executed_time": "00:00:00",
             "total_cases": 2,
-            "executed_cases": 0,
+            "executed_cases": 1,
             "status": {
                 "passed": 0,
-                "failed": 0,
+                "failed": 1,
                 "blocked": 0,
                 "retest": 0,
-                "untested": 2,
+                "untested": 1,
                 "skipped": 0
             },
             "testers": [
@@ -26,10 +26,10 @@
                     "display_name": "locar",
                     "total_cases": 2,
                     "passed": 0,
-                    "failed": 0,
+                    "failed": 1,
                     "blocked": 0,
                     "retest": 0,
-                    "untested": 2,
+                    "untested": 1,
                     "skipped": 0
                 }
             ]
