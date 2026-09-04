@@ -1,6 +1,6 @@
 {
     "schema_version": "1.0",
-    "generated_at": "2026-09-04T16:03:24+08:00",
+    "generated_at": "2026-09-04T16:08:27+08:00",
     "test_runs": [
         {
             "run_id": 41,
@@ -23,7 +23,7 @@
             },
             "testers": [
                 {
-                    "display_name": "locar",
+                    "display_name": "RD-Locar",
                     "total_cases": 2,
                     "passed": 2,
                     "failed": 0,
@@ -55,7 +55,7 @@
             },
             "testers": [
                 {
-                    "display_name": "locar",
+                    "display_name": "RD-Locar",
                     "total_cases": 2,
                     "passed": 2,
                     "failed": 0,
@@ -87,7 +87,7 @@
             },
             "testers": [
                 {
-                    "display_name": "locar",
+                    "display_name": "RD-Locar",
                     "total_cases": 4,
                     "passed": 1,
                     "failed": 0,
@@ -119,7 +119,7 @@
             },
             "testers": [
                 {
-                    "display_name": "locar",
+                    "display_name": "RD-Locar",
                     "total_cases": 4,
                     "passed": 1,
                     "failed": 0,
@@ -151,7 +151,7 @@
             },
             "testers": [
                 {
-                    "display_name": "locar",
+                    "display_name": "RD-Locar",
                     "total_cases": 3,
                     "passed": 1,
                     "failed": 0,
