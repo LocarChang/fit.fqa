@@ -1,6 +1,6 @@
 {
     "schema_version": "1.0",
-    "generated_at": "2026-09-07T16:35:25+08:00",
+    "generated_at": "2026-09-07T16:40:27+08:00",
     "test_runs": [
         {
             "run_id": 41,
@@ -73,12 +73,12 @@
             "plan_name": "Error Handling",
             "build": "1.1",
             "run_status": "Running",
-            "estimated_time": "00:01:04",
-            "executed_time": "00:00:10",
-            "total_cases": 4,
-            "executed_cases": 1,
+            "estimated_time": "00:00:56",
+            "executed_time": "00:00:00",
+            "total_cases": 3,
+            "executed_cases": 0,
             "status": {
-                "passed": 1,
+                "passed": 0,
                 "failed": 0,
                 "blocked": 0,
                 "retest": 0,
@@ -88,8 +88,8 @@
             "testers": [
                 {
                     "display_name": "RD-Locar",
-                    "total_cases": 4,
-                    "passed": 1,
+                    "total_cases": 3,
+                    "passed": 0,
                     "failed": 0,
                     "blocked": 0,
                     "retest": 0,
