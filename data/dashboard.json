@@ -1,7 +1,39 @@
 {
     "schema_version": "1.0",
-    "generated_at": "2026-09-11T08:41:29+08:00",
+    "generated_at": "2026-09-11T08:52:10+08:00",
     "test_runs": [
+        {
+            "run_id": 44,
+            "run_name": "[JIRA] ASTROBOY-518 CLONE - Questions regarding ASTROBOY2 Run 2026-09-11",
+            "project": "Astraboy2 - 940",
+            "plan_name": "[JIRA] ASTROBOY-518 CLONE - Questions regarding ASTROBOY2",
+            "build": "1.1",
+            "run_status": "Running",
+            "estimated_time": "00:00:16",
+            "executed_time": "00:00:00",
+            "total_cases": 1,
+            "executed_cases": 0,
+            "status": {
+                "passed": 0,
+                "failed": 0,
+                "blocked": 0,
+                "retest": 0,
+                "untested": 1,
+                "skipped": 0
+            },
+            "testers": [
+                {
+                    "display_name": "RD-Locar",
+                    "total_cases": 1,
+                    "passed": 0,
+                    "failed": 0,
+                    "blocked": 0,
+                    "retest": 0,
+                    "untested": 1,
+                    "skipped": 0
+                }
+            ]
+        },
         {
             "run_id": 41,
             "run_name": "[JIRA] ASTROBOY-517 CLONE - Questions regarding ASTROBOY2( Issue 3:Inconsistency between document size option text in RSP software and specification) Run 2026-09-03",
