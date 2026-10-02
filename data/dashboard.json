@@ -1,7 +1,39 @@
 {
     "schema_version": "1.0",
-    "generated_at": "2026-10-02T13:52:23+08:00",
+    "generated_at": "2026-10-02T13:57:25+08:00",
     "test_runs": [
+        {
+            "run_id": 47,
+            "run_name": "FITDS_SEC-62 Run 2026-10-02",
+            "project": "ADS4-HT",
+            "plan_name": "FITDS_SEC-62",
+            "build": "1.1",
+            "run_status": "Running",
+            "estimated_time": "00:00:00",
+            "executed_time": "00:00:00",
+            "total_cases": 1,
+            "executed_cases": 0,
+            "status": {
+                "passed": 0,
+                "failed": 0,
+                "blocked": 0,
+                "retest": 0,
+                "untested": 1,
+                "skipped": 0
+            },
+            "testers": [
+                {
+                    "display_name": "RD-Locar",
+                    "total_cases": 1,
+                    "passed": 0,
+                    "failed": 0,
+                    "blocked": 0,
+                    "retest": 0,
+                    "untested": 1,
+                    "skipped": 0
+                }
+            ]
+        },
         {
             "run_id": 45,
             "run_name": "QAP-FW-Select 100 Run 2026-09-17",
